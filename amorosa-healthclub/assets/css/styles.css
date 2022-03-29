@@ -652,9 +652,9 @@ Transformando pra mobile
     }
 
     .massagem-tittle{
-        font-size: 6rem;
+        font-size: 5rem;
         top: 0rem;
-        line-height: 7rem;
+        line-height: 6rem;
         text-align: center;
     }
     
@@ -666,15 +666,15 @@ Transformando pra mobile
    
     .massagem-button{
         top: 6rem;
-        height: 10rem;
-        width: 12rem;
+        max-height: 10rem;
+        max-width: 12rem;
         font-size: 1.3rem;    
     }
 
     .padel-tittle{
         text-align: center;
         line-height: 7rem;
-        font-size: 6.5rem;
+        font-size: 6rem;
         top: 5rem;
     }
     
@@ -706,6 +706,10 @@ Transformando pra mobile
  
     }   
 
+    .location-grid iframe{
+        width: 90%;
+
+    }
     .back-to-top{
         position: fixed;
         bottom:2rem;
