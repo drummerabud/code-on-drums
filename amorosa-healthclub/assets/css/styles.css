@@ -1,0 +1,726 @@
+/*variáveis padrões */
+:root{
+    --gap:5rem;
+    --color-black: black;
+    --color-white: white;
+    --color-yellow: #E3DD22;
+    --color-red: #8D1111;
+    --shadow: 2px 2px 2px #000;
+}
+
+/*zerar css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--color-black);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body .full-width{
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.main-content{
+    margin: 0 auto;
+    padding: var(--gap);
+    position: relative;
+}
+
+.section{
+    min-height: 100vh;
+}
+
+.slide{
+    display: none;
+}
+
+.close-menu{
+    display: none;
+}
+
+.menu{
+    background: rgba(0,0,0, 0.7);
+    position: fixed;
+    top: 0;
+    right:0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block; 
+    padding: 1.7rem;
+    font-size: 2rem;
+    font-family: 'Smooch Sans', sans-serif;
+    color: var(--color-white);
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--color-red);
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+    transition: all 300ms ease-out;
+}
+
+.menu-space{
+    height: 8rem;    
+}
+
+.menu-content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#logo{
+    width: 10rem;
+}
+
+.main-bg{
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+.home{
+    background-image: url('../images/home.png');
+}
+
+.gym{
+    background-image: url('../images/gym-outro.png');
+}
+
+.gym-tittle{
+    color: var(--color-yellow);
+    margin-top: 8rem;
+    text-align: left;
+    font-size: 10rem;  
+    line-height: 10rem;
+    text-transform: uppercase;
+    text-shadow: var(--shadow);
+}
+
+.gym-tittle h2 ~ h2{
+    color: var(--color-white);
+    font-size: 6.2rem;  
+    line-height: 4.5rem;
+}
+
+.gym-tittle p{
+    color: var(--color-white);
+    position: relative; 
+    text-align: center;
+    top: 8rem;
+    width: 46rem;
+    height: 18rem;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: rgba(0,0,0, 0.6);
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+}
+
+.natacao{
+    background-image: url('../images/piscina-outro.png');
+}
+
+.natacao-tittle{
+    color: var(--color-white);
+    float: right;
+    text-align: right;
+    width: 60rem;
+    text-shadow: var(--shadow);
+    text-transform: uppercase;
+    margin-top: 6rem;
+    font-size: 7rem;
+    line-height: 8rem;
+}
+
+.natacao-tittle h2 ~ h2{
+    color: var(--color-yellow);
+    font-size: 7.3rem;
+}
+
+.natacao-tittle p{
+    color: var(--color-white);
+    position: relative; 
+    float: right;
+    text-align: center;
+    top: 8rem;
+    width:  auto;
+    height:  auto;
+    padding: 2rem 2rem 0 2rem;
+    background-color: rgba(0,0,0, 0.2);
+    font-size: 1.5rem;
+    line-height: 3rem;
+    border-radius: 2rem;
+}
+
+.fitness{
+    background-image: url('../images/fitness.png');
+}
+
+.fitness-tittle{
+    color: var(--color-red);
+    position: relative;
+    text-align: center;
+    line-height: 8.5rem;
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    top: 5rem;
+    text-shadow: 1px 1px 1px #FFF;
+}
+
+.fitness-buttons{
+    position: relative;
+    top: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--gap)
+} 
+
+.fitness-button-one{
+    height: 8rem;
+    width: 14rem;
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 2rem 0 2rem;
+    font-size:1.5rem;
+    color: var(--color-white);
+}
+
+.fitness-flex{
+    display: flex;
+    height: 33rem;
+    justify-content: center;
+}
+
+.fitness-text{
+    color: var(--color-white);
+    background-color:rgba(0,0,0, 0.6);
+    position: relative;
+    text-align: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-shadow: var(--shadow);
+    padding: 4rem;
+    border-radius: 2rem;
+    align-self: flex-end;
+}
+
+.spa{
+    background-image: url('../images/spa.png');
+}
+
+.spa-slide{
+    background-image: url('../images/spa/spa-outro.jpg');
+}
+
+.spa-slide-grid{
+    position: relative;
+    top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: var(--gap);
+}
+
+.content-flex{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.spa-slide-grid img{
+    max-width: 75%;
+    border-radius: 10%;
+    overflow: hidden;
+    /* border: 0.3rem solid grey; */
+}
+
+.spa-slide h2{
+    color: var(--color-red);
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+    font-size: 3rem;
+}
+
+.spa-slide p{
+    margin-top: 1rem;
+    color:var(--color-black);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    padding: 1.2rem;
+    border-radius: 2rem;
+    background-color: rgba(0,0,0, 0.1);
+}
+
+.spa-tittle{
+    color: var(--color-white);
+    top: 20rem;
+    position: relative;
+    text-align: right;
+    line-height: 6rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    text-shadow: var(--shadow);
+}
+
+.spa-tittle p{
+    font-size: 2.3rem;
+}
+
+.massagem{
+    background-image: url('../images/massagem.png');
+}
+
+.massagem-tittle{
+    color: var(--color-white);
+    position: relative;
+    font-size: 7rem;
+    text-transform: uppercase;
+    top: 15rem;
+    line-height: 8rem;
+    text-shadow: var(--shadow);
+}
+
+.massagem-tittle h2 ~ h2{
+    color: var(--color-yellow);
+}
+
+.massagem-button{
+    position:relative;
+    top: 20rem;
+    height: 9rem;
+    width: 14rem;
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 2rem 0 2rem;
+    font-size:1.5rem;
+    color: var(--color-white);
+}
+
+.padel{
+    background-image: url('../images/padel.png');
+}
+
+.padel-tittle{
+    color: var(--color-yellow);
+    position: relative;
+    text-align: right;
+    line-height: 6.7rem;
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    text-shadow: var(--shadow);
+    top: 15rem;
+}
+
+.padel-tittle p{
+    color: var(--color-white);
+    font-size: 3rem;
+}
+
+.contato{
+    background-image: url('../images/contato-outro.jpg');
+}
+
+.contact-form-grid{
+    position: relative;
+    top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: var(--gap);
+}
+
+.contact-form .form-grid{
+    position:relative;
+    top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.form-grid legend{
+    color: var(--color-white);
+    margin-bottom: 4rem;
+}
+
+.contact-form fieldset{
+    border-style: none;
+}
+
+.form-group label{
+    display: block;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.form-group{
+    flex: 1 1 40%;
+}
+
+.form-group input, 
+.form-group textarea{
+    border: none;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.form-group button{
+    border: 0.2rem solid var(--color-white);
+    background: var(--color-red);
+    padding: 1.5rem 2rem;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    border-radius: 0 2rem 0 2rem;
+    cursor: pointer;
+    font-family: 'Fredoka', sans-serif;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover{
+    background: var(--color-white);
+    color: var(--color-red);
+}
+
+.location{
+    background-image: url('../images/location.jpg');
+}
+
+.location-grid{
+    position: relative;
+    top: 8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    /* gap: var(--gap); */
+}
+
+.location-grid h2{
+    color:var(--color-red);
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.location-grid h2~h2{
+    color:var(--color-red);
+    font-size: 4rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+
+.location-grid img{
+    width: 12%;
+    margin-top: 2rem;
+    margin-right: 1.2rem;
+ }
+
+footer{
+    text-align: center;
+    color: var(--color-white);
+    padding: 2rem 2em;
+}
+/* --------------------------------------------------------------------------
+
+Transformando pra mobile 
+
+---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 760px){
+
+    .close-menu-label::after{
+        position: fixed;
+        top:2rem;
+        right: 2rem;
+        content: '≡';
+        color: var(--color-yellow);
+        background-color: var(--color-black);
+        font-size: 4rem;
+        padding: 0 1.5rem;
+        cursor: pointer;
+        z-index: 2; 
+    }
+
+    .close-menu:checked~.menu{
+        display: block; 
+    }
+
+    .close-menu:checked~.close-menu-label::after{
+        content:'✖';
+    }
+
+    .menu{
+        display: none;
+    }
+
+     .menu-space{
+        height:0rem;
+    }
+
+    #logo{
+        position: relative;
+        top:5rem;
+        width: 8rem;
+    }
+
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+
+    }
+   
+    .section{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    .gym-tittle{
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 7rem;  
+        line-height: 8rem;
+    }
+    .gym-tittle h2 ~ h2{
+        text-align: center;
+        font-size: 4.4rem;  
+        line-height: 4.5rem;
+    }
+    
+    .gym-tittle p{
+        text-align: center;
+        height: auto;
+        width: auto;    
+        font-size: 1.3rem;
+        top: 3rem;
+    }
+
+    .natacao-tittle{
+        float: none;
+        text-align: center;
+        width: auto;
+        margin-top: 6rem;
+        font-size: 6.6rem;
+        line-height: 7.5rem;
+    }
+    
+    .natacao-tittle h2 ~ h2{
+        color: var(--color-yellow);
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    .natacao-tittle p{
+        top: 2rem;
+        width:  auto;
+        height:  auto;
+        padding: 2rem;
+        background-color: rgba(0,0,0, 0.2);
+        font-size: 1.2rem;
+        line-height: 2rem;
+        border-radius: 2rem;
+    }
+
+    .fitness-tittle{
+        line-height: 5.5rem;
+        font-size: 5rem;
+        top: 7rem;
+    }
+    
+    .fitness-buttons{
+        top: 13rem;
+        gap: 1rem;
+    } 
+    
+    .fitness-button-one{
+        height: 8rem;
+        width: 12rem;
+        background-color: var(--color-red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 2rem 0 2rem;
+        font-size:1.5rem;
+        color: var(--color-white);
+    }
+    
+    .fitness-flex{
+        height: 27rem;
+    }
+    
+    .fitness-text{
+        font-size: 1.3rem;
+        padding: 2rem;
+     }
+
+     .spa-tittle{
+        color: var(--color-white);
+        top: 5rem;
+        text-align: center;
+        line-height: 7rem;
+        font-size: 6rem;
+    }
+    
+    .spa-tittle p{
+        padding-top: 8rem;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .spa-slide-grid img{
+        max-width: 33%;
+        border-radius: 30%;
+    }
+
+    .spa-slide-grid{
+        top: 0rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .spa-slide h2{ 
+        margin-top: 0;
+    }
+
+    .spa-slide p{
+        margin-top: 0;
+        font-size: 1.3rem;
+        line-height: 1.6;
+        padding: 1rem;
+    }
+
+    .massagem-tittle{
+        font-size: 6rem;
+        top: 0rem;
+        line-height: 7rem;
+        text-align: center;
+    }
+    
+    .massagem-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    .massagem-button{
+        top: 6rem;
+        height: 10rem;
+        width: 12rem;
+        font-size: 1.3rem;    
+    }
+
+    .padel-tittle{
+        text-align: center;
+        line-height: 7rem;
+        font-size: 6.5rem;
+        top: 5rem;
+    }
+    
+    .padel-tittle p{
+        color: var(--color-white);
+        padding-top:4rem;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .location-grid{
+        top: 0rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-form .form-grid{
+        top: 0;
+    }
+
+    .location-grid h2{
+        font-size: 3rem;
+        position: relative;
+        top:2rem;
+        margin-bottom: 2rem;
+    }
+
+    .location-grid h2~h2{
+        font-size: 3rem;
+ 
+    }   
+
+    .back-to-top{
+        position: fixed;
+        bottom:2rem;
+        right: 2rem;
+        color: var(--color-yellow);
+        background-color: var(--color-black);
+        font-size: 3rem;
+        padding: 1rem 1.5rem;
+        /* padding-bottom: 1rem; */
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 2; 
+    }
+}
+
+
+
+
