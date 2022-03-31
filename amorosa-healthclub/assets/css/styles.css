@@ -110,11 +110,6 @@ body .full-width{
     padding-bottom: 0;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
 #logo{
     width: 10rem;
 }
@@ -128,6 +123,45 @@ body .full-width{
 
 .home{
     background-image: url('../images/home.png');
+}
+
+.amorosa-tittle{
+    float: right;
+    text-align: right;
+    position: relative;
+    top:5rem;
+}
+
+.amorosa-tittle h2{
+    color: var(--color-red);
+    position:relative;
+    text-transform: uppercase;
+    font-size: 10rem;
+    text-shadow: 3px 3px 0px #000;
+}
+
+.amorosa-list{
+    float: right;
+    max-width: 45%;
+}
+
+.amorosa-list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-family: 'Smooch Sans', sans-serif;
+
+}
+
+.amorosa-list ul li img{
+    max-width: 15%;
+    background-color: var(--color-white);
+    border-radius: 20%;
+    box-shadow: var(--shadow);
 }
 
 .gym{
@@ -487,7 +521,7 @@ Transformando pra mobile
 
 ---------------------------------------------------------------------------*/
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 896px){
 
     .close-menu-label::after{
         position: fixed;
@@ -537,7 +571,37 @@ Transformando pra mobile
         align-items: center;
         justify-content: center;
     }
-  
+
+    .amorosa-tittle{
+        float: none;
+        text-align: center;
+        top:0rem;
+    }
+    
+    .amorosa-tittle h2{
+        font-size: 8rem;
+        line-height: 7rem;
+    }
+    
+    .amorosa-list{
+        float: none;
+        position: relative;
+        max-width: 100%;
+        top:4rem;
+    }
+    
+    .amorosa-list ul li{
+         font-size: 5rem;
+        text-shadow: var(--shadow);
+    }
+    
+    .amorosa-list ul li img{
+        max-width: 10%;
+        background-color: var(--color-white);
+        border-radius: 20%;
+        box-shadow: var(--shadow);
+    }
+
     .gym-tittle{
         margin-top: 4rem;
         text-align: center;
@@ -718,7 +782,6 @@ Transformando pra mobile
         background-color: var(--color-black);
         font-size: 3rem;
         padding: 1rem 1.5rem;
-        /* padding-bottom: 1rem; */
         cursor: pointer;
         border-radius: 50%;
         z-index: 2; 
